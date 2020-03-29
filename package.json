@@ -5,7 +5,14 @@
   "main": "index.js",
   "babel": {
     "presets": [
-      "@babel/preset-env",
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ],
       "@babel/preset-react"
     ]
   },
@@ -19,7 +26,8 @@
   "license": "ISC",
   "dependencies": {
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "snoowrap": "^1.21.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
